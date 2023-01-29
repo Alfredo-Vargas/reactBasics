@@ -1,10 +1,10 @@
-import { React, useState } from 'react'
+import { React, useState } from "react";
 
 // classes do not implement hook, they achieve the same thing differently
 
 function App() {
-  const [count, setState] = useState(4)
-  const [theme, setTheme] = useState('blue')
+  const [count, setCount] = useState(4);
+  const [theme, setTheme] = useState("blue");
   // const count = state.count
   // const theme = state.theme
 
@@ -15,12 +15,12 @@ function App() {
   //   return 4
   // })
   function decrementCount() {
-    setState(prevCount => prevCount - 1)
+    setState((prevCount) => prevCount - 1);
   }
 
   function incrementCount() {
-    setState(prevCount => prevCount + 1)
-    setTheme(prevTheme => 'red')
+    setState((prevCount) => prevCount + 1);
+    setTheme((prevTheme) => "red");
   }
   return (
     <>
@@ -29,7 +29,7 @@ function App() {
       <span>{theme}</span>
       <button onClick={incrementCount}>+</button>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
